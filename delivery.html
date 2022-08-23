@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,600&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="css/legacy.css" />
+    <![endif]-->
+  </head>
+
+  <body class="grid">
+    <!--SKIP-->
+    <div class="skip">
+      <a href="#delivery" class="skip__link">Skip to delivery content >> </a>
+    </div>
+    <!--TOP LINKS-->
+    <div class="top">
+      <div class="top__logo">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="img/emblem_logo_64.png" alt="logo image" />
+          <div class="logo__txt-box">
+            <span class="logo__txt logo__txt--1">Emblem </span>
+            <span class="logo__txt logo__txt--2">Rare collection books</span>
+          </div>
+        </a>
+      </div>
+      <ul class="top__links">
+        <li><a class="link-green" href="contact.html">Contact us</a></li>
+        <li><a class="link-green" href="#">Accessibility</a></li>
+        <li><a class="link-green" href="#">Login</a></li>
+      </ul>
+    </div>
+    <!--NAV-->
+    <nav class="nav">
+      <!--BURGER-->
+      <input tabindex="0" type="checkbox" class="nav__burger-checkbox" id="burger" />
+      <label class="nav__burger-label" for="burger"><span class="nav__burger-lines"></span> </label>
+      <!--MENU-->
+      <ul class="nav__links">
+        <li class="nav__link nav__link--active"><a href="index.html">Home</a></li>
+        <li class="nav__link">
+          <!--SUBMENU FUNCTIONALITY-->
+          <input type="checkbox" id="nav__submenu-cb" class="nav__submenu-cb" tabindex="0" />
+          <label for="nav__submenu-cb" class="nav__submenu-label">
+            <span class="nav__submenu-icon"> &or;</span>
+          </label>
+          <a class="nav__submenu-a" href="books.html">Books </a>
+          <!--BOOK SUBMENU LINKS-->
+          <ul class="nav__links--books">
+            <li class="nav__link"><a href="#">20th Century Books</a></li>
+            <li class="nav__link"><a href="19th.html">19th Century Books</a></li>
+            <li class="nav__link"><a href="#">18th Century Books</a></li>
+            <li class="nav__link"><a href="#">Rare Books</a></li>
+          </ul>
+        </li>
+        <li class="nav__link"><a href="delivery.html">Delivery</a></li>
+        <li class="nav__link"><a href="#">About us</a></li>
+        <li class="nav__link"><a href="#">Books as an investment</a></li>
+      </ul>
+    </nav>
+    <!--HEADER-->
+    <header tabindex="0" class="header">
+      <h1>Delivery</h1>
+      <div>
+        <div class="header__text">
+          <p class="text-important">Deliveries are undertaken where appropriate by specialist fragile and valuable goods handlers.</p>
+          <p class="text-important">All goods are sent first-class to both the UK and abroad.</p>
+        </div>
+        <figure class="header__right">
+          <!-- footer icons taken from https://icomoon.io/#preview-free -->
+          <img class="header__right-img header__right-img--icon" src="img/truck.svg" alt="truck icon" />
+        </figure>
+      </div>
+      <a href="#table" class="header__btn btn btn--cta">See delivery rates</a>
+    </header>
+    <!--MAIN-->
+    <main class="main grid--main">
+      <!--SECTION ESTIMATED DELIVERY-->
+      <section class="section-middle">
+        <div id="delivery" tabindex="0">
+          <h2>Estimated delivery times are as follows:</h2>
+          <ul class="delivery__list">
+            <!-- icons taken from https://brankic1979.com/icons/ -->
+            <li><img class="icon" src="img/time.svg" alt="icon time" />UK: 1 to2 days</li>
+            <li><img class="icon" src="img/time.svg" alt="icon time" />Europe: 2 to 3 days</li>
+            <li><img class="icon" src="img/time.svg" alt="icon time" />USA/Canada: 3 to 5 days</li>
+            <li><img class="icon" src="img/time.svg" alt="icon time" />Rest of the World: 5-14 days</li>
+          </ul>
+          <p class="text-warning">However, delivery times may differ if repair to books is requested before dispatch.</p>
+        </div>
+        <!--TABLE-->
+        <div class="table-box">
+          <table id="table" class="table-big" tabindex="0">
+            <caption>
+              All deliveries are included in the price of the book for books over £500. Otherwise the following rates apply:
+            </caption>
+            <tr>
+              <td rowspan="2" class="table__extra"></td>
+              <th colspan="2" scope="colgroup">Up to 1kg</th>
+              <th colspan="2" scope="colgroup">Over 1kg</th>
+              <th colspan="2" scope="colgroup">Over 3kg</th>
+            </tr>
+            <tr>
+              <th scope="col">Premium</th>
+              <th scope="col">Standard</th>
+              <th scope="col">Premium</th>
+              <th scope="col">Standard</th>
+              <th scope="col">Premium</th>
+              <th scope="col">Standard</th>
+            </tr>
+            <tr>
+              <th scope="row">UK</th>
+              <td>£5.99</td>
+              <td>£9.99</td>
+              <td>£11.59</td>
+              <td>£16.59</td>
+              <td>£33.99</td>
+              <td>£43.99</td>
+            </tr>
+            <tr>
+              <th scope="row">Europe</th>
+              <td>£12.00</td>
+              <td>£16.00</td>
+              <td>£25.00</td>
+              <td>£31.00</td>
+              <td>£70.00</td>
+              <td>£80.00</td>
+            </tr>
+            <tr>
+              <th scope="row">USA/Canada</th>
+              <td>£14.99</td>
+              <td>£22.99</td>
+              <td>£27.00</td>
+              <td>£32.00</td>
+              <td>£68.00</td>
+              <td>£78.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Rest of the World</th>
+              <td>£20.00</td>
+              <td>£24.00</td>
+              <td>£25.00</td>
+              <td>£30.00</td>
+              <td>£80.00</td>
+              <td>£91.00</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+      <ul class="footer__images">
+        <!-- footer icons taken from https://icomoon.io/#preview-free -->
+        <li>
+          <a href="#"> <img src="img/google.svg" alt="google icon" /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="img/facebook.svg" alt="facebook icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/github.svg" alt="github icon" /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="img/twitter.svg" alt="twitter icon" /></a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li>
+          <a class="link-green" href="#">Privacy</a>
+        </li>
+        <li>
+          <a class="link-green" href="#">Terms and Conditions</a>
+        </li>
+        <li>
+          <a class="link-green" href="#">Returns</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

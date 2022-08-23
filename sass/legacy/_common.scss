@@ -1,0 +1,25 @@
+.top {
+  & > * {
+    display: inline-block;
+  }
+
+  &__logo {
+    width: 29%;
+  }
+
+  &__links {
+    text-align: right;
+    margin-left: auto;
+    width: 70%;
+    float: right;
+    vertical-align: middle;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+}
+
+.header {
+  padding-bottom: 8rem;
+}

@@ -1,0 +1,240 @@
+.nav {
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  padding: 0;
+
+  //LINKS MOBILE
+  &__links {
+    padding-top: 6.5rem;
+    background-color: $color-grey-dark-0;
+    position: fixed;
+    top: 0;
+    //checked
+    right: 0;
+    width: 80%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    z-index: 1;
+    //take out of screen links
+    right: -100%;
+    //HIDE EXPANDABLE LINKS
+    &--books {
+      display: none;
+    }
+  }
+  //LINKS
+  &__link {
+    font-family: $font-display;
+    font-size: 2.3rem;
+    //very important to be displayed
+    display: none;
+    //LINKS anchor
+    & a {
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      color: $color-grey-dark-5;
+      width: 100%;
+      &:hover {
+        background-color: $color-grey-dark-2;
+        color: white !important;
+      }
+    }
+    //CURRENT PAGE LINK
+    &--active {
+      background-color: $color-primary;
+      & a:hover {
+        background-color: $color-primary-light !important;
+      }
+    }
+  }
+
+  //BURGER
+  &__burger {
+    //LABEL
+    &-label {
+      padding-top: 12px;
+      position: absolute;
+      height: 5rem;
+      width: 5rem;
+      right: 0.5rem;
+      z-index: 2;
+      cursor: pointer;
+      background-color: white;
+    }
+    //BURGER LINES
+    &-lines {
+      position: relative;
+      &,
+      &:before,
+      &:after {
+        width: 5rem;
+        height: 0.6rem;
+        display: inline-block;
+        background-color: $color-grey-dark-1;
+      }
+      //BURGER LINE 1
+      &::before {
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        content: '';
+        position: absolute;
+        top: -1.3rem;
+        left: 0;
+      }
+      //BURGER LINE 3
+      &::after {
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1.3rem;
+      }
+    }
+    //BURGER ANIMATION
+    //1 MIDDLE LINE DISSAPEAR
+    &-checkbox:checked + label &-lines {
+      background-color: transparent !important;
+    }
+
+    //ANMATION MAKE FROM a BURGER A X
+    &-checkbox:checked + label &-lines::before {
+      top: 0;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+    }
+
+    &-checkbox:checked + label &-lines::after {
+      top: 0rem;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+    }
+    //DISPLAY THE LINKS WHEN THE MENU IS CHECKED
+    &-checkbox:checked ~ .nav__links {
+      right: 0;
+    }
+    //DISPLAY LINK
+    &-checkbox:checked ~ .nav__links .nav__link {
+      display: block;
+    }
+
+    //SHOW FOCUS ON BURGER WHEN CHECKBOX IS CHECKED
+    &-checkbox:focus ~ .nav__burger-label {
+      background-color: $color-focus;
+    }
+    //BURGER CHECKBOX DISSAPEAR
+    &-checkbox {
+      position: absolute;
+      left: -10000px;
+    }
+  }
+
+  //SUBMENU
+  &__submenu {
+    //SUBEMENU LABEL
+    &-label {
+      display: inline-block;
+      position: absolute;
+      color: $color-white;
+      right: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 5px;
+      padding: 0 1rem;
+      cursor: pointer;
+      transform: scale(2.5, 1.2);
+
+      &:hover {
+        background-color: $color-grey-dark-2;
+      }
+    }
+    //SUBEMENU CB
+    &-cb {
+      position: absolute;
+      left: -10000px;
+
+      //SHOW SECONDARY MENU
+      &:checked ~ .nav__links--books {
+        display: block;
+      }
+
+      //SHOW FOCUS ON BURGER WHEN CHECKBOX IS CHECKED
+      &:focus ~ .nav__submenu-label {
+        background-color: $color-focus;
+        color: $color-grey-dark-1;
+      }
+
+      //ROTATE ON CHECK ANIMATION
+      &:checked ~ .nav__submenu-label {
+        -webkit-transform: rotate(-180deg) scale(2.5, 1.2);
+        -ms-transform: rotate(-180deg) scale(2.5, 1.2);
+        transform: rotate(-180deg) scale(2.5, 1.2);
+      }
+    }
+  }
+
+  //TABLET
+  @include respond(tablet) {
+    //HIDE BURGER MENU
+
+    &__burger-label {
+      display: none;
+    }
+
+    &__links {
+      padding-top: 0rem;
+      position: relative !important;
+      right: 0;
+      width: 100%;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
+
+      &--books {
+        position: absolute;
+        background-color: $color-grey-dark-0;
+        & > * > * {
+          min-width: 25rem;
+        }
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      position: relative;
+      &:hover .nav__links--books {
+        display: block;
+      }
+    }
+
+    &__submenu {
+      &-a {
+        padding-right: 5.2rem !important;
+        left: 0;
+      }
+      &-label {
+        right: 1rem;
+        bottom: 0;
+        font-size: 1rem;
+        padding: 0.5rem 0.3rem;
+        bottom: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

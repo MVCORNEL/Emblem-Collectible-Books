@@ -1,0 +1,51 @@
+.logo {
+  &:focus img {
+    background-color: yellow;
+  }
+
+  &:focus &__txt {
+    background-color: yellow;
+  }
+
+  &__txt {
+    display: none;
+    font-family: 'parisir';
+  }
+
+  @include respond(tablet) {
+    &__img {
+      display: inline-block;
+    }
+
+    &__txt {
+      font-family: 'parisir';
+      display: block;
+
+      &-box {
+        display: inline-block;
+      }
+
+      &--1 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: $color-primary;
+        line-height: 1;
+        text-align: center;
+      }
+
+      &--2 {
+        font-size: 2rem;
+        color: $color-grey-dark-1;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 0.5;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  //WEBSITE LOGO WILL BE SHOWN ONLIE FOR DEVICES WIDER THAN 350px, that will make the small devices fully responsive
+  @include respond(small-phone) {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+.footer {
+  grid-column: 1/5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-row: 7;
+  -ms-grid-row: 7;
+  background-color: $color-grey-dark-5;
+  padding: 2rem 2rem 1rem 2rem !important;
+
+  &__images {
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+
+    li a:focus > * {
+      z-index: 1;
+      background-color: $color-focus;
+    }
+
+    li a img {
+      z-index: 2;
+      display: block;
+      height: auto;
+      width: 48px;
+      padding: 5px;
+    }
+
+    & > * {
+      display: inline-block;
+      margin: 1rem;
+
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+
+  &__links {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    & a {
+      padding: 0.5rem 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  @include respond(tablet) {
+    &__links {
+      text-align: center;
+      margin-top: 1rem;
+
+      & li {
+        display: inline-block;
+
+        & a {
+          color: $color-primary-dark;
+        }
+      }
+
+      & :not(:last-child) {
+        border-right: 1px solid $color-primary;
+      }
+    }
+  }
+}

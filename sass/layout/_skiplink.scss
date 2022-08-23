@@ -1,0 +1,26 @@
+.skip {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  padding: 0;
+
+  &__link {
+    padding: 0;
+    color: $color-primary;
+    text-decoration: none;
+    font-size: 2rem;
+    position: absolute;
+    left: -10000px;
+    font-family: $font-display;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &__link:focus {
+    position: relative;
+    left: auto;
+    top: 0;
+  }
+}

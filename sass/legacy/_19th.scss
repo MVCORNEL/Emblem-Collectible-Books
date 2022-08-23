@@ -1,0 +1,23 @@
+.main {
+  display: block;
+}
+
+.book {
+  display: inline-block;
+  margin-top: 5rem !important;
+  vertical-align: top;
+
+  margin: 3rem 2rem 3rem 2rem;
+  & > * {
+    display: block;
+  }
+
+  &__middle {
+    clear: both;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 46%;
+    margin: 3rem 1rem 5rem 1rem;
+  }
+}

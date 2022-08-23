@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,600&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="css/legacy.css" />
+    <![endif]-->
+  </head>
+  <body class="grid">
+    <!--SKIP-->
+    <div class="skip">
+      <a href="#rare" class="skip__link">Skip to rare books >> </a>
+      <a href="#specialises" class="skip__link">Skip to emblem specialises books >> </a>
+    </div>
+    <!--TOP-->
+    <div class="top">
+      <div class="top__logo">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="img/emblem_logo_64.png" alt="logo image" />
+          <div class="logo__txt-box">
+            <span class="logo__txt logo__txt--1">Emblem </span>
+            <span class="logo__txt logo__txt--2">Rare collection books</span>
+          </div>
+        </a>
+      </div>
+      <ul class="top__links">
+        <li><a class="link-green" href="contact.html">Contact us</a></li>
+        <li><a class="link-green" href="#">Accessibility</a></li>
+        <li><a class="link-green" href="#">Login</a></li>
+      </ul>
+    </div>
+    <!--NAV-->
+    <nav class="nav">
+      <!--BURGER-->
+      <input tabindex="0" type="checkbox" class="nav__burger-checkbox" id="burger" />
+      <label class="nav__burger-label" for="burger"><span class="nav__burger-lines"></span> </label>
+      <!--MENU-->
+      <ul class="nav__links">
+        <li class="nav__link nav__link--active"><a href="index.html">Home</a></li>
+        <li class="nav__link">
+          <!--SUBMENU FUNCTIONALITY-->
+          <input type="checkbox" id="nav__submenu-cb" class="nav__submenu-cb" tabindex="0" />
+          <label for="nav__submenu-cb" class="nav__submenu-label">
+            <span class="nav__submenu-icon"> &or;</span>
+          </label>
+          <a class="nav__submenu-a" href="books.html">Books </a>
+          <!--BOOK SUBMENU LINKS-->
+          <ul class="nav__links--books">
+            <li class="nav__link"><a href="#">20th Century Books</a></li>
+            <li class="nav__link"><a href="19th.html">19th Century Books</a></li>
+            <li class="nav__link"><a href="#">18th Century Books</a></li>
+            <li class="nav__link"><a href="#">Rare Books</a></li>
+          </ul>
+        </li>
+        <li class="nav__link"><a href="delivery.html">Delivery</a></li>
+        <li class="nav__link"><a href="#">About us</a></li>
+        <li class="nav__link"><a href="#">Books as an investment</a></li>
+      </ul>
+    </nav>
+    <!--HEADER-->
+    <header id="books" class="header">
+      <h1>Emblem Books</h1>
+      <div>
+        <div class="header__text">
+          <p class="text-important">Emblem sells rare books direct via e-commerce, and ships to any location. Our collection is extensive, and includes many rare first-editions and signed copies.</p>
+          <p class="text-important">All books are restored by our expert team of craftsmen before being put up for sale, so your book will always reach you in the best condition possible.</p>
+        </div>
+        <figure class="header__right">
+          <img class="header__right-image" src="img/charlotte_bronte.jpeg" alt="charlotte bronte portrait" />
+          <figcaption class="img-caption">Charlotte Bronte</figcaption>
+        </figure>
+        <a href="contact.html" class="header__btn btn btn--cta">Contact us for price.</a>
+      </div>
+    </header>
+    <main class="main grid--main">
+      <!--SECTION RARE BOOKS-->
+      <section id="rare" tabindex="0" class="section-left section-left--books">
+        <figure class="section-left__image">
+          <img src="img/percy_shelly.jpeg" alt="percy shelly author portrait" />
+          <figcaption class="img-caption">Percy Shelly</figcaption>
+        </figure>
+        <div class="section-left__text">
+          <h2>Rare books</h2>
+          <p>Rare books represent an excellent investment opportunity. Some rare books have been known to appreciate in value by as much as 15% in a single year, while the average yearly rate of appreciation is 4.6%.</p>
+          <p>Please browse our collection. However, if there is something you are after that is not available, please feel free to contact us, and we will be happy to assist you in your search.</p>
+        </div>
+      </section>
+      <section id="specialises" tabindex="0" class="section-right section-right--books">
+        <!--SECTION SPECIALISES-->
+        <div class="section-right__text">
+          <h2>Emblem specialises</h2>
+          <p>Emblem specialises in 20th Century, 19th Century and 18th Century fiction and poetry, although from time to time we do come into the possession of pre 18th Century items and items of non-fiction.</p>
+          <p>All books sold can be independently valued on site before purchase. Where possible we will provide a history of publication and prior ownership to our customers.</p>
+        </div>
+        <figure class="section-right__image">
+          <img src="img/oscar_wilde.jpeg" alt="oscar wide author portrait" />
+          <figcaption class="img-caption">Oscar Wilde</figcaption>
+        </figure>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+      <!-- footer icons taken from https://icomoon.io/#preview-free -->
+      <ul class="footer__images">
+        <li>
+          <a href="#"> <img src="img/google.svg" alt="google icon" /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="img/facebook.svg" alt="facebook icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/github.svg" alt="github icon" /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="img/twitter.svg" alt="twitter icon" /></a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li>
+          <a class="link-green" href="#">Privacy</a>
+        </li>
+        <li>
+          <a class="link-green" href="#">Terms and Conditions</a>
+        </li>
+        <li>
+          <a class="link-green" href="#">Returns</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

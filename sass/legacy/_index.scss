@@ -1,0 +1,27 @@
+//INDEX
+@media screen and (min-width: 768px) {
+  .main {
+    display: block;
+  }
+
+  .section-valuing {
+    margin: 1rem;
+  }
+
+  .section-buying {
+    display: inline-block;
+    max-width: 66%;
+  }
+
+  .section-selling {
+    display: inline-block;
+  }
+
+  .buying__image {
+    display: inline-block;
+  }
+
+  .selling__image {
+    display: inline-block;
+  }
+}

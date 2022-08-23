@@ -1,0 +1,113 @@
+.header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+    border-bottom: 1px solid $color-grey-dark-4;
+  }
+
+  //INDEX
+  &__right {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &-author {
+      font-family: $font-display;
+      color: $color-primary;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      display: block;
+    }
+
+    &-title {
+      letter-spacing: 1px;
+      font-family: $font-display;
+      color: $color-grey-dark-0;
+      line-height: 1.5;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    &-img--icon {
+      padding: 10px;
+      border: 1px solid $color-grey-dark-3 !important;
+      width: 32%;
+      height: auto;
+      border: 0;
+    }
+  }
+}
+
+@include respond(tablet) {
+  .header {
+    padding: 2rem 2rem 2rem 2rem;
+    h1 {
+      text-align: start;
+    }
+
+    &__btn {
+      width: auto;
+      display: block !important;
+      margin: 0 auto;
+      max-width: 40%;
+    }
+
+    //INDEX
+    &__right {
+      &-img--icon {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@include respond(desktop) {
+  .header {
+    border: 1px solid $color-grey-dark-4;
+    padding: 2rem 3rem 3rem 3rem;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: '';
+      display: none;
+      border-bottom: 0;
+    }
+
+    &__text {
+      margin-top: 1rem;
+      display: inline-block;
+      width: 66%;
+      vertical-align: top;
+    }
+
+    //INDEX
+    &__right {
+      vertical-align: top;
+      padding-top: 0rem;
+      margin-top: 0;
+      display: inline-block;
+      width: 33%;
+      -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+      transform: translateY(-20%);
+
+      &-img--icon {
+        width: 40%;
+      }
+    }
+    &__btn {
+      float: left;
+      width: auto;
+    }
+  }
+}

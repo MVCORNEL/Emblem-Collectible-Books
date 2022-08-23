@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%; //1rem
+
+  @include respond(small-phone) {
+    font-size: 55%; //1rem
+  }
+
+  @include respond(tablet) {
+    font-size: 65%;
+  }
+
+  @include respond(desktop) {
+    font-size: 67.5%;
+  }
+}
+
+::selection {
+  background-color: $color-primary-light;
+}

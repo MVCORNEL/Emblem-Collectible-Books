@@ -1,0 +1,16 @@
+%section--full {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 10;
+  grid-column: 1/11;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $color-grey-dark-4;
+
+  @include respond(desktop) {
+    margin-bottom: 2rem;
+    border: 1px solid $color-grey-dark-4;
+    padding: 3rem 2rem !important;
+    margin: 1rem;
+  }
+}

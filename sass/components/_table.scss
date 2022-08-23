@@ -1,0 +1,41 @@
+.table-box {
+  overflow-x: auto;
+}
+
+table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+table,
+td {
+  border-collapse: collapse;
+  border: 1px solid $color-grey-dark-1;
+  text-align: center;
+}
+
+table caption {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $color-grey-dark-1;
+  text-align: center;
+  padding: 1rem;
+}
+
+th {
+  border: 1px solid $color-primary-light;
+  background-color: $color-primary;
+  color: white;
+}
+
+th,
+td {
+  padding: 1rem 1rem;
+}
+
+.table__extra {
+  background-color: $color-primary;
+  border: none;
+}

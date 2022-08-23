@@ -1,0 +1,81 @@
+.btn {
+  &,
+  // Form button do not have link and visited state
+  &:link,
+  &:visited {
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1.4rem 3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+
+    @include respond(tablet) {
+      margin-top: 1rem;
+    }
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+    -webkit-transform: translateY(-0.3rem);
+    -ms-transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem);
+  }
+
+  &:active,
+  &:focus {
+    outline: none; //FORM BUTTON
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &:focus {
+    background-color: $color-focus;
+    color: black;
+    border: 1px solid black;
+  }
+  &--cta {
+    width: 100%;
+  }
+}
+
+.btn-text {
+  &,
+  &:link,
+  &:visited {
+    font-size: 1.7rem;
+    font-style: italic;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &:focus {
+    background-color: $color-focus;
+    color: $color-black;
+    border: 1px solid $color-black;
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(2px);
+  }
+}

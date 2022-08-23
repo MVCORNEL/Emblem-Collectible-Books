@@ -1,0 +1,36 @@
+.form {
+  width: 100%;
+  display: block;
+
+  &__control {
+    display: block;
+  }
+
+  &__label {
+    &--cb {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__fieldset {
+      padding: 0;
+      width: 47%;
+      margin: 1%;
+      vertical-align: top;
+      float: left;
+    }
+
+    &__control {
+      &--condition {
+        width: 48% !important;
+        margin: 1%;
+        display: inline-block;
+      }
+
+      &--btn {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

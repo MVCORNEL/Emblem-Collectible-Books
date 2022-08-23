@@ -1,0 +1,17 @@
+.section-video {
+  -ms-grid-row: 6;
+  grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  grid-column: 1/5;
+  border-bottom: 1px solid $color-grey-dark-4;
+
+  @include respond(desktop) {
+    border: 1px solid $color-grey-dark-4;
+  }
+}

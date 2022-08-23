@@ -1,0 +1,28 @@
+// MEDIA QUERIES + breakpoint arguments
+// < 375 small phone
+// 375-768px phone
+// 768px-1025px: tab
+// 1025px+
+//ORDER: Base + typography > generalt layout > page layout > components
+@mixin respond($bp) {
+  //We do not use pixel here, because if the user will use the default font size in the browser the media queries won't be affected by that
+  //In media queries EMS and REMS are not affected by a root font size setting  as that in the _base font-size: 62.5%;
+  //In media queries a Rem is always equals to the font size that is coming from the browser = 16px by default ,but if the user changes it it will exactly the changed one, whatever we have in the _base font size definition
+  //EMS best option for media queries
+  //this extra media query will help making the website fully responsive down to 275px width, that will support small devices like galaxy fold
+  @if $bp == small-phone {
+    @media only screen and (max-width: 23.4375em) {
+      @content;
+    }
+  }
+  @if $bp == tablet {
+    @media only screen and (min-width: 47.9375em) {
+      @content;
+    }
+  }
+  @if $bp == desktop {
+    @media only screen and (min-width: 64.0625em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.grid {
+  // position: relative;
+  margin: 0 auto;
+  display: -ms-grid;
+  -ms-grid-columns: 25% 25% 25% 25%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  //ALL GRID ELEMENTS
+  & > * {
+    padding: 0 10px;
+  }
+
+  &--main {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    display: -ms-grid;
+    -ms-grid-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+  }
+
+  //CUSTOME GRID 19TH
+  @include respond(desktop) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}

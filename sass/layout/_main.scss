@@ -1,0 +1,55 @@
+.main {
+  padding-top: 1rem;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.section-middle {
+  @extend %section--full;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.section-left {
+  @extend %section--full;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.section-right {
+  @extend %section--full;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.section-right__image,
+.section-left__image {
+  display: none;
+}
+
+@include respond(desktop) {
+  .main {
+    border: 1px solid $color-grey-dark-4;
+    padding: 2rem 1rem;
+
+    &--contact {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .section-left,
+  .section-right {
+    &__text {
+      display: inline-block;
+      width: 66%;
+    }
+
+    &__image {
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      vertical-align: baseline;
+    }
+  }
+}
